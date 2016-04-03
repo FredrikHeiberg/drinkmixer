@@ -1,0 +1,118 @@
+#vodkaFanta {
+	background: url('../imgs/vodkaFanta.png');
+	width: 300px;
+	height: 300px;
+	display: inline-block;
+	margin-top: 30px;
+	margin-right: 30px;
+	border-radius: 10px;
+}
+
+#ginTonic {
+	background: url('../imgs/ginTonic.jpg');
+	width: 300px;
+	height: 300px;
+	display: inline-block;
+	margin-top: 30px;
+	margin-right: 30px;
+	border-radius: 10px;
+}
+
+#romCoke {
+	background: url('../imgs/romCoke.jpg');
+	width: 300px;
+	height: 300px;
+	display: inline-block;
+	margin-top: 30px;
+	margin-right: 30px;
+	border-radius: 10px;
+}
+
+/*#tequila {
+	background: url('../imgs/tequila.jpg');
+	width: 300px;
+	height: 300px;
+	display: inline-block;
+	margin-top: 30px;
+	margin-right: 30px;
+	border-radius: 10px;
+	background-size: 300px 300px;
+}
+
+#icedtea {
+	background: url('../imgs/icedtea.jpeg');
+	width: 300px;
+	height: 300px;
+	display: inline-block;
+	margin-top: 30px;
+	margin-right: 30px;
+	border-radius: 10px;
+	background-size: 300px 300px;
+}*/
+
+#container {
+	position: absolute;
+	height: 100%;
+    width: 100%;
+	text-align: center;
+}
+
+#label {
+	text-align: center;
+	color: white;
+	position: relative;
+  	top: 30%;
+}
+
+#shade {
+	height: 50px;
+	background-color: #000;
+	background-color: rgba(0,0,0,0.6);
+	bottom: 0;
+}
+
+#inner {
+	margin-top: 30px;
+
+}
+
+h1 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 100px;
+}
+
+h2 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 70px;
+}
+
+h3 {
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+input {
+	font-size: 20px;
+	height: 120px;
+	width: 550px;
+}
+
+input[type=submit]
+{
+    /* your styles here, You can just increase its font size below*/
+    font-size: 75px; 
+    font-weight: bold;
+    margin-bottom: 50px;
+/*    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+}
+
+#progress {
+	margin-right: 120px;
+	margin-left: 120px;
+	margin-top: 80px;
+}
+
+.progress {
+	height: 180px;
+}
