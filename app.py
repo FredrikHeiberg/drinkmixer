@@ -1,6 +1,14 @@
 from flask import Flask, render_template, request, json
 app = Flask(__name__)
 
+from Adafruit_MotorHAT import Adafruit_MotorHAT, Adafruit_DCMotor
+ 
+import time
+import atexit
+
+# create a default object, no changes to I2C address or frequency
+mh = Adafruit_MotorHAT(addr=0x60)
+
 param = []
 drinkName = ""
 drinkSize = ""
@@ -36,6 +44,8 @@ def process():
 
 # 	return render_template('index.html')
 
+myMotor = mh.getMotor(3)
+
 # Run Python code to select desired drink and size
 def mixDrink(name, size):
 	print "run mixer: %s, %s" %(name, size)
@@ -48,6 +58,15 @@ def ginTonic(size):
 
 def fantaVodka(size):
 	print "fanta and vodka"
+
+# recommended for auto-disabling motors on shutdown!
+def turnOffMotors():
+	mh.getMotor(1).run(Adafruit_MotorHAT.RELEASE)
+	mh.getMotor(2).run(Adafruit_MotorHAT.RELEASE)
+	mh.getMotor(3).run(Adafruit_MotorHAT.RELEASE)
+	mh.getMotor(4).run(Adafruit_MotorHAT.RELEASE)
+ 
+atexit.register(turnOffMotors)
 
 if __name__ == '__main__':
 	app.run(debug=True)

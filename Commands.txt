@@ -1,0 +1,20 @@
+## Apache log
+nano /var/log/apache2/error.log
+
+## Folder location
+/usr/share/drinkmixer
+
+## Restart Apache
+/etc/init.d/apache2 restart
+
+## Change Permissions
+chmod -R 755 '/dir/to/folder/'
+
+## Remove non-empty folder
+rm -rf foldername
+
+## Flaks Apache deployment documentation
+http://flask.pocoo.org/docs/0.10/deploying/mod_wsgi/
+
+## VNC activation
+tightvncserver
