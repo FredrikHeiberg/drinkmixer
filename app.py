@@ -1,15 +1,15 @@
 from flask import Flask, render_template, request, json
 app = Flask(__name__)
 
-#import motorController
+import motorController
 
-from Adafruit_MotorHAT import Adafruit_MotorHAT, Adafruit_DCMotor
+#from Adafruit_MotorHAT import Adafruit_MotorHAT, Adafruit_DCMotor
  
-import time
-import atexit
+#import time
+#import atexit
 
 # create a default object, no changes to I2C address or frequency
-mh = Adafruit_MotorHAT(addr=0x60)
+#mh = Adafruit_MotorHAT(addr=0x60)
 
 param = []
 drinkName = ""
@@ -26,11 +26,6 @@ def index():
 			drinkSize = param.get('size')
 
 			mixDrink(drinkName, drinkSize)
-			myMotor.setSpeed(255)
-			myMotor.run(Adafruit_MotorHAT.RELEASE);
-			myMotor.run(Adafruit_MotorHAT.FORWARD)
-			time.sleep(5.0)
-			turnOffMotors()
 
 	return render_template('index.html', error=error)
 
@@ -51,48 +46,43 @@ def process():
 
 # 	return render_template('index.html')
 
-myMotor = mh.getMotor(3)
+#myMotor = mh.getMotor(3)
 
 # Run Python code to select desired drink and size
 def mixDrink(name, size):
 	print "run mixer: %s, %s" %(name, size)
-	#mixTheDrink()
-	myMotor.setSpeed(255)
-	myMotor.run(Adafruit_MotorHAT.RELEASE);
-	myMotor.run(Adafruit_MotorHAT.FORWARD)
-	time.sleep(5.0)
-	turnOffMotors()
+	mixTheDrink()
 	#myMotor.setSpeed(255)
 	#myMotor.run(Adafruit_MotorHAT.FORWARD)
 	#time.sleep(5.0)
 
 def romCoke(size):
 	print "rom and coke"
-	#mixTheDrink()
+	mixTheDrink()
 	#myMotor.setSpeed(255)
 	#myMotor.run(Adafruit_MotorHAT.FORWARD)
 	#time.sleep(5.0)
 
 def ginTonic(size):
 	print "gin and tonic"
-	#mixTheDrink()
+	mixTheDrink()
 	#myMotor.setSpeed(255)
 	#myMotor.run(Adafruit_MotorHAT.FORWARD)
 	#time.sleep(5.0)
 
 def fantaVodka(size):
 	print "fanta and vodka"
-	#mixTheDrink()
+	mixTheDrink()
 	#myMotor.setSpeed(255)
 	#myMotor.run(Adafruit_MotorHAT.FORWARD)
 	#time.sleep(5.0)
 
 # recommended for auto-disabling motors on shutdown!
-def turnOffMotors():
-	mh.getMotor(1).run(Adafruit_MotorHAT.RELEASE)
-	mh.getMotor(2).run(Adafruit_MotorHAT.RELEASE)
-	mh.getMotor(3).run(Adafruit_MotorHAT.RELEASE)
-	mh.getMotor(4).run(Adafruit_MotorHAT.RELEASE)
+#def turnOffMotors():
+#	mh.getMotor(1).run(Adafruit_MotorHAT.RELEASE)
+#	mh.getMotor(2).run(Adafruit_MotorHAT.RELEASE)
+#	mh.getMotor(3).run(Adafruit_MotorHAT.RELEASE)
+#	mh.getMotor(4).run(Adafruit_MotorHAT.RELEASE)
  
 #atexit.register(turnOffMotors)
 
