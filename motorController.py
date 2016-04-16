@@ -22,4 +22,4 @@ def mixTheDrink():
 	myMotor.run(Adafruit_MotorHAT.FORWARD)
 	time.sleep(5.0)
 
-mixDrink()
+mixTheDrink()
