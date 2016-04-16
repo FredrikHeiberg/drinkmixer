@@ -51,28 +51,28 @@ def process():
 # Run Python code to select desired drink and size
 def mixDrink(name, size):
 	print "run mixer: %s, %s" %(name, size)
-	drinkMix()
+	mixDrink()
 	#myMotor.setSpeed(255)
 	#myMotor.run(Adafruit_MotorHAT.FORWARD)
 	#time.sleep(5.0)
 
 def romCoke(size):
 	print "rom and coke"
-	drinkMix()
+	mixDrink()
 	#myMotor.setSpeed(255)
 	#myMotor.run(Adafruit_MotorHAT.FORWARD)
 	#time.sleep(5.0)
 
 def ginTonic(size):
 	print "gin and tonic"
-	drinkMix()
+	mixDrink()
 	#myMotor.setSpeed(255)
 	#myMotor.run(Adafruit_MotorHAT.FORWARD)
 	#time.sleep(5.0)
 
 def fantaVodka(size):
 	print "fanta and vodka"
-	drinkMix()
+	mixDrink()
 	#myMotor.setSpeed(255)
 	#myMotor.run(Adafruit_MotorHAT.FORWARD)
 	#time.sleep(5.0)
