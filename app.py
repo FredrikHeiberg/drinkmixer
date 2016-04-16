@@ -1,15 +1,15 @@
 from flask import Flask, render_template, request, json
 app = Flask(__name__)
 
-import motorController
+#import motorController
 
-#from Adafruit_MotorHAT import Adafruit_MotorHAT, Adafruit_DCMotor
+from Adafruit_MotorHAT import Adafruit_MotorHAT, Adafruit_DCMotor
  
-#import time
-#import atexit
+import time
+import atexit
 
 # create a default object, no changes to I2C address or frequency
-#mh = Adafruit_MotorHAT(addr=0x60)
+mh = Adafruit_MotorHAT(addr=0x60)
 
 param = []
 drinkName = ""
@@ -46,12 +46,17 @@ def process():
 
 # 	return render_template('index.html')
 
-#myMotor = mh.getMotor(3)
+myMotor = mh.getMotor(3)
 
 # Run Python code to select desired drink and size
 def mixDrink(name, size):
 	print "run mixer: %s, %s" %(name, size)
-	mixTheDrink()
+	#mixTheDrink()
+	myMotor.setSpeed(255)
+	myMotor.run(Adafruit_MotorHAT.RELEASE);
+	myMotor.run(Adafruit_MotorHAT.FORWARD)
+	time.sleep(5.0)
+	turnOffMotors()
 	#myMotor.setSpeed(255)
 	#myMotor.run(Adafruit_MotorHAT.FORWARD)
 	#time.sleep(5.0)
