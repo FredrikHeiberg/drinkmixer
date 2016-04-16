@@ -14,7 +14,7 @@ myMotor = mh.getMotor(3)
 
 myMotor.setSpeed(255)
 
-def mixDrink:
+def mixDrink():
 	myMotor.run(Adafruit_MotorHAT.RELEASE);
 
 	myMotor.run(Adafruit_MotorHAT.FORWARD)
