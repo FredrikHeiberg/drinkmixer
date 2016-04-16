@@ -1,3 +1,3 @@
-import os
+import motorController
 
-os.system("motorController.py")
+mixDrink()
