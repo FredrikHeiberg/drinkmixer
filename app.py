@@ -52,6 +52,7 @@ def process():
 def mixDrink(name, size):
 	print "run mixer: %s, %s" %(name, size)
 	mixDrink()
+	os.system("motorController.py")
 	#myMotor.setSpeed(255)
 	#myMotor.run(Adafruit_MotorHAT.FORWARD)
 	#time.sleep(5.0)
