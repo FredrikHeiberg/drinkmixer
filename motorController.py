@@ -3,6 +3,8 @@ from Adafruit_MotorHAT import Adafruit_MotorHAT, Adafruit_DCMotor
 import time
 import atexit
 
+print "FILE RUN"
+
 mh = Adafruit_MotorHAT(addr=0x60)
 
 def turnOffMotors():
