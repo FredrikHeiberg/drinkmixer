@@ -58,21 +58,21 @@ def mixDrink(name, size):
 
 def romCoke(size):
 	print "rom and coke"
-	mixTheDrink()
+	#mixTheDrink()
 	#myMotor.setSpeed(255)
 	#myMotor.run(Adafruit_MotorHAT.FORWARD)
 	#time.sleep(5.0)
 
 def ginTonic(size):
 	print "gin and tonic"
-	mixTheDrink()
+	#mixTheDrink()
 	#myMotor.setSpeed(255)
 	#myMotor.run(Adafruit_MotorHAT.FORWARD)
 	#time.sleep(5.0)
 
 def fantaVodka(size):
 	print "fanta and vodka"
-	mixTheDrink()
+	#mixTheDrink()
 	#myMotor.setSpeed(255)
 	#myMotor.run(Adafruit_MotorHAT.FORWARD)
 	#time.sleep(5.0)
