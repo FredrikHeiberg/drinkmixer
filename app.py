@@ -49,15 +49,31 @@ myMotor = mh.getMotor(3)
 # Run Python code to select desired drink and size
 def mixDrink(name, size):
 	print "run mixer: %s, %s" %(name, size)
+	myMotor.setSpeed(255)
+	time.sleep(5)
+	myMotor.run(Adafruit_MotorHAT.RELEASE)
+	time.sleep(1.0)
 
 def romCoke(size):
 	print "rom and coke"
+	myMotor.setSpeed(255)
+	time.sleep(5)
+	myMotor.run(Adafruit_MotorHAT.RELEASE)
+	time.sleep(1.0)
 
 def ginTonic(size):
 	print "gin and tonic"
+	myMotor.setSpeed(255)
+	time.sleep(5)
+	myMotor.run(Adafruit_MotorHAT.RELEASE)
+	time.sleep(1.0)
 
 def fantaVodka(size):
 	print "fanta and vodka"
+	myMotor.setSpeed(255)
+	time.sleep(5)
+	myMotor.run(Adafruit_MotorHAT.RELEASE)
+	time.sleep(1.0)
 
 # recommended for auto-disabling motors on shutdown!
 def turnOffMotors():
