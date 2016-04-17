@@ -23,9 +23,9 @@ def mixTheDrink(name, size):
 	myMotor.run(Adafruit_MotorHAT.RELEASE);
 	myMotor.run(Adafruit_MotorHAT.FORWARD)
 
-	percentage(time)
+	#percentage(time)
 	time.sleep(time)
-	
+
 	turnOffMotors()
 
 def romAndCoke():
@@ -40,4 +40,5 @@ def fantaAndVodka():
 def percentage(time):
 	for i in range(1,time):
 		i = i + 1
+		print i
 		time.sleep(1.0)
