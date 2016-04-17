@@ -25,4 +25,3 @@ def mixTheDrink():
 	time.sleep(5.0)
 	turnOffMotors()
 
-mixTheDrink()

@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, json
 app = Flask(__name__)
 
+import motorController
+
 #from Adafruit_MotorHAT import Adafruit_MotorHAT, Adafruit_DCMotor
  
 #import time
@@ -49,7 +51,7 @@ def process():
 # Run Python code to select desired drink and size
 def mixDrink(name, size):
 	print "run mixer: %s, %s" %(name, size)
-	import motorController
+	mixTheDrink()
 	#myMotor.setSpeed(255)
 	#myMotor.run(Adafruit_MotorHAT.FORWARD)
 	#time.sleep(5.0)
