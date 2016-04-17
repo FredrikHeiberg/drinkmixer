@@ -38,7 +38,8 @@ def process():
 	time = 5
 	for i in range(1,time):
 		i++
-		sleep.time(1)
+		print i
+		time.sleep(1)
 
 	if i == time:
 		return redirect(url_for('/'))
