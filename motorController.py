@@ -17,13 +17,13 @@ atexit.register(turnOffMotors)
 myMotor = mh.getMotor(3)
 
 def mixTheDrink(name, size):
-	time = 5.0
+	time = 5
 
 	myMotor.setSpeed(255)
 	myMotor.run(Adafruit_MotorHAT.RELEASE);
 	myMotor.run(Adafruit_MotorHAT.FORWARD)
 
-	#percentage(time)
+	percentage(time)
 	time.sleep(time)
 
 	turnOffMotors()
@@ -38,7 +38,8 @@ def fantaAndVodka():
 	print "test3"
 
 def percentage(time):
-	for i in range(1,time):
+	for i in range(0,time):
 		i = i + 1
 		print i
 		time.sleep(1.0)
+		
