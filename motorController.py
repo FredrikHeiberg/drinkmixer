@@ -1,4 +1,5 @@
 from Adafruit_MotorHAT import Adafruit_MotorHAT, Adafruit_DCMotor
+from multiprocessing import Process
 
 import time
 import atexit
@@ -23,7 +24,9 @@ def mixTheDrink(name, size):
 	myMotor.run(Adafruit_MotorHAT.RELEASE);
 	myMotor.run(Adafruit_MotorHAT.FORWARD)
 
-	percentage(time)
+	p1 = Process(target = percentage)
+	p1.start()
+
 	time.sleep(time)
 
 	turnOffMotors()
@@ -42,4 +45,3 @@ def percentage(time):
 		i = i + 1
 		print i
 		time.sleep(1.0)
-		
