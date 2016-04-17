@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, json
 app = Flask(__name__)
 
-import motorController
+from motorController import mixTheDrink
 
 #from Adafruit_MotorHAT import Adafruit_MotorHAT, Adafruit_DCMotor
  
