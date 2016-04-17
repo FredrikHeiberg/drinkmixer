@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request, json
+from flask import Flask, render_template, request, json, session
+from flask.ext.session import Session
 app = Flask(__name__)
 
 from motorController import mixTheDrink
@@ -14,6 +15,9 @@ from motorController import mixTheDrink
 param = []
 drinkName = ""
 drinkSize = ""
+
+SESSION_TYPE = 'redis'
+Session(app)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -50,6 +54,13 @@ def process():
 
 # Run Python code to select desired drink and size
 def mixDrink(name, size):
+	#if (name == 'romCoke'):
+	#	drinkName = 
+	#elif (name == 'ginTonic'):
+	#	drinkName = 
+	#elif (name == 'fantaVodka'):
+	#	drinkName = 
+
 	mixTheDrink()
 	print "run mixer: %s, %s" %(name, size)
 	#myMotor.setSpeed(255)
