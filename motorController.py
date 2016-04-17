@@ -16,12 +16,22 @@ atexit.register(turnOffMotors)
 
 myMotor = mh.getMotor(3)
 
-def mixTheDrink():
-	print "START MOTOR!"
+def mixTheDrink(name, size):
+
+
 	myMotor.setSpeed(255)
 	myMotor.run(Adafruit_MotorHAT.RELEASE);
 
 	myMotor.run(Adafruit_MotorHAT.FORWARD)
 	time.sleep(5.0)
 	turnOffMotors()
+
+def romAndCoke():
+	print "test"
+
+def ginAndTonic():
+	print "test1"
+
+def fantaAndVodka():
+	print "test3"
 

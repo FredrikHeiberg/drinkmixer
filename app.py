@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, json, session
+from flask import Flask, render_template, request, json, session, redirect
 from flask.ext.session import Session
 app = Flask(__name__)
 
@@ -35,6 +35,13 @@ def index():
 
 @app.route('/process', methods=['GET', 'POST'])
 def process():
+	time = 5
+	for i in range(1,time):
+		i++
+		sleep.time(1)
+
+	if i == time:
+		return redirect(url_for('/'))
 	return render_template('process.html')
 
 # @app.route('/mix', methods=['GET'])
@@ -61,7 +68,7 @@ def mixDrink(name, size):
 	#elif (name == 'fantaVodka'):
 	#	drinkName = 
 
-	mixTheDrink()
+	mixTheDrink(name, size)
 	print "run mixer: %s, %s" %(name, size)
 	#myMotor.setSpeed(255)
 	#myMotor.run(Adafruit_MotorHAT.FORWARD)
