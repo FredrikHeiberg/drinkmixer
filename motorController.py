@@ -24,9 +24,6 @@ def mixTheDrink(name, size):
 	myMotor.run(Adafruit_MotorHAT.RELEASE);
 	myMotor.run(Adafruit_MotorHAT.FORWARD)
 
-	p1 = Process(target = percentage)
-	p1.start()
-
 	time.sleep(time)
 
 	turnOffMotors()
