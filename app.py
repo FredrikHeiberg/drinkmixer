@@ -35,14 +35,6 @@ def index():
 
 @app.route('/process', methods=['GET', 'POST'])
 def process():
-	time = 5
-	for i in range(1,time):
-		i = i+1
-		print i
-		time.sleep(1)
-
-	if i == time:
-		return redirect(url_for('/'))
 	return render_template('process.html')
 
 # @app.route('/mix', methods=['GET'])
