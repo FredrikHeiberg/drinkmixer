@@ -31,6 +31,7 @@ def index():
 
 @app.route('/process', methods=['GET', 'POST'])
 def process():
+	mixTheDrink()
 	return render_template('process.html')
 
 # @app.route('/mix', methods=['GET'])
@@ -51,28 +52,24 @@ def process():
 # Run Python code to select desired drink and size
 def mixDrink(name, size):
 	print "run mixer: %s, %s" %(name, size)
-	mixTheDrink()
 	#myMotor.setSpeed(255)
 	#myMotor.run(Adafruit_MotorHAT.FORWARD)
 	#time.sleep(5.0)
 
 def romCoke(size):
 	print "rom and coke"
-	mixTheDrink()
 	#myMotor.setSpeed(255)
 	#myMotor.run(Adafruit_MotorHAT.FORWARD)
 	#time.sleep(5.0)
 
 def ginTonic(size):
 	print "gin and tonic"
-	mixTheDrink()
 	#myMotor.setSpeed(255)
 	#myMotor.run(Adafruit_MotorHAT.FORWARD)
 	#time.sleep(5.0)
 
 def fantaVodka(size):
 	print "fanta and vodka"
-	mixTheDrink()
 	#myMotor.setSpeed(255)
 	#myMotor.run(Adafruit_MotorHAT.FORWARD)
 	#time.sleep(5.0)
