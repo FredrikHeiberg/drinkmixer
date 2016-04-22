@@ -22,13 +22,13 @@
 				var style = document.getElementById("bar").style.width;
 				setTimeout(function () {                              
 					if (counter < seconds) { 
-						counter = counter + 0.1;   
+						counter = counter + 0.11;   
 						percentage = counter/seconds*100;
 						document.getElementById("bar").style.width=percentage+"%";
 						console.log(percentage);
 						barUpdate();              
 					}
-				}, 101) 
+				}, 100) 
 			}
 
 			function pageRefresh() {
