@@ -19,13 +19,12 @@ myMotor = mh.getMotor(3)
 
 def mixTheDrink(name, size):
 	time = 5
-	timeTwo = 5.0
 
 	myMotor.setSpeed(255)
 	myMotor.run(Adafruit_MotorHAT.RELEASE);
 	myMotor.run(Adafruit_MotorHAT.FORWARD)
 
-	time.sleep(timeTwo)
+	time.sleep(5.0)
 
 	turnOffMotors()
 	print "MOTOR OFF!!"
