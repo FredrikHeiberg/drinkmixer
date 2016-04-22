@@ -18,7 +18,7 @@ atexit.register(turnOffMotors)
 myMotor = mh.getMotor(3)
 
 def mixTheDrink(name, size):
-	time = 5
+	timeVariable = 5
 
 	myMotor.setSpeed(255)
 	myMotor.run(Adafruit_MotorHAT.RELEASE);
