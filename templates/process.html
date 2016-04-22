@@ -8,23 +8,35 @@
 	<div id='container'>
 		<h2>Mixing drink, please w8</h2>
 		<div id='progress'>
-		<div class="progress">
-			<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-				<span class="sr-only">0% Complete (warning)</span>
+			<div class="progress">
+				<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+					<span class="sr-only">0% Complete (warning)</span>
+				</div>
 			</div>
-		</div>
-		<script>
-		function testPrint() {
-			console.log("TEST");
-		}
-		window.onload = testPrint;
-		</script>
-		<div>
-	</div>
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="/static/js/bootstrap.min.js"></script>
-	<script src="/static/js/logic.js"></script>
-</body>
-<!--- Make sure that js function runs on pageload! --> 
+			<script>
+			function barUpdate() {
+				var style = document.getElementById("test").style.width;
+				setTimeout(function () {                              
+					if (counter < seconds) { 
+						counter = counter + 0.1;   
+						percentage = counter/seconds*100;
+						document.getElementById("test").style.width=percentage+"%";
+						console.log(counter);  
+						myLoop();              
+					}
+					else {
+						console.log("DONE!");
+					}
+				}, 100) 
+			}
+			window.onload = barUpdate;
+			</script>
+			<div>
+			</div>
+			<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+			<!-- Include all compiled plugins (below), or include individual files as needed -->
+			<script src="/static/js/bootstrap.min.js"></script>
+			<script src="/static/js/logic.js"></script>
+		</body>
+		<!--- Make sure that js function runs on pageload! --> 
