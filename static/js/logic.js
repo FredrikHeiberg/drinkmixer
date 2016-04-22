@@ -98,7 +98,4 @@ function barUpdate() {
    	}, 100) 
 }
 
-function testPrint() {
-	console.log("TEST");
-}
 
