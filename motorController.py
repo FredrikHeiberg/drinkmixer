@@ -27,6 +27,7 @@ def mixTheDrink(name, size):
 	time.sleep(time)
 
 	turnOffMotors()
+	print "MOTOR OFF!!"
 
 def romAndCoke():
 	print "test"
@@ -37,8 +38,3 @@ def ginAndTonic():
 def fantaAndVodka():
 	print "test3"
 
-def percentage(time):
-	for i in range(0,time):
-		i = i + 1
-		print i
-		time.sleep(1.0)
