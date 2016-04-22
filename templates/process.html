@@ -29,8 +29,14 @@
 					}
 				}, 100) 
 			}
-			window.location.replace("/");
+
+			function pageRefresh() {
+				setTimeout(function() {
+					window.location.replace("/");
+				}, 5000)
+			}
 			window.onload = barUpdate;
+			window.onload = pageRefresh;
 			</script>
 			<div>
 			</div>
