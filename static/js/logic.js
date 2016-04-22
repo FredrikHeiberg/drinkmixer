@@ -77,25 +77,3 @@ function check() {
 		$('#mix').removeAttr('disabled');
 	}
 }
-
-var counter = 0;  
-var seconds = 5;
-var percentage = 0;	
-
-function barUpdate() {
-	var style = document.getElementById("test").style.width;
-   	setTimeout(function () {                              
-    if (counter < seconds) { 
-    	counter = counter + 0.1;   
-      	percentage = counter/seconds*100;
-      	document.getElementById("test").style.width=percentage+"%";
-        console.log(counter);  
-        myLoop();              
-    }
-    else {
-      	console.log("DONE!");
-     	}
-   	}, 100) 
-}
-
-
