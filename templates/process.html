@@ -17,6 +17,7 @@
 			var counter = 0;  
 			var seconds = 5;
 			var percentage = 0;	
+
 			function barUpdate() {
 				var style = document.getElementById("bar").style.width;
 				setTimeout(function () {                              
@@ -25,7 +26,7 @@
 						percentage = counter/seconds*100;
 						document.getElementById("bar").style.width=percentage+"%";
 						console.log(counter);  
-						myLoop();              
+						barUpdate();              
 					}
 					else {
 						console.log("DONE!");
