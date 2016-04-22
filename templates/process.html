@@ -9,18 +9,18 @@
 		<h2>Mixing drink, please w8</h2>
 		<div id='progress'>
 			<div class="progress">
-				<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+				<div id="bar" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
 					<span class="sr-only">0% Complete (warning)</span>
 				</div>
 			</div>
 			<script>
 			function barUpdate() {
-				var style = document.getElementById("test").style.width;
+				var style = document.getElementById("bar").style.width;
 				setTimeout(function () {                              
 					if (counter < seconds) { 
 						counter = counter + 0.1;   
 						percentage = counter/seconds*100;
-						document.getElementById("test").style.width=percentage+"%";
+						document.getElementById("bar").style.width=percentage+"%";
 						console.log(counter);  
 						myLoop();              
 					}
