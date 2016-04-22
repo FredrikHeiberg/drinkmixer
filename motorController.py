@@ -36,5 +36,5 @@ def ginAndTonic():
 	print "test1"
 
 def fantaAndVodka():
-	print "test3"
+	print "test3 print"
 
