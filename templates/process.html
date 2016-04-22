@@ -35,8 +35,14 @@
 					window.location.replace("/");
 				}, 5000)
 			}
-			window.onload = barUpdate;
-			window.onload = pageRefresh;
+
+			function runFunctions() {
+				barUpdate();
+				pageRefresh();
+			}
+			window.onload = runFunctions;
+			// window.onload = barUpdate;
+			// window.onload = pageRefresh;
 			</script>
 			<div>
 			</div>
