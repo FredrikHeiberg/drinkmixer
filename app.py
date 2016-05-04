@@ -35,8 +35,7 @@ def index():
 
 @app.route('/process', methods=['GET', 'POST'])
 def process():
-	timeVariable = timeVariable
-	return render_template('process.html', variable=timeVariable)
+	return render_template('process.html')
 
 # @app.route('/mix', methods=['GET'])
 # def mix():
