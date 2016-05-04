@@ -29,19 +29,13 @@ def index():
 			drinkName = param.get('name')
 			drinkSize = param.get('size')
 
-			#timevar = mixDrink(drinkName, drinkSize)
+			mixDrink(drinkName, drinkSize)
 
 	return render_template('index.html', error=error)
 
 @app.route('/process', methods=['GET', 'POST'])
 def process():
-	timevar = mixDrink(drinkName, drinkSize)
-	return render_template('process.html', timevar=timevar)
-
-@app.route('/turnoff', method=['GET'])
-def turnoff():
-	turnOffMotors()
-	return redirect('/', code=302)
+	return render_template('process.html')
 
 # @app.route('/mix', methods=['GET'])
 # def mix():
