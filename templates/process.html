@@ -14,9 +14,12 @@
 				</div>
 			</div>
 			<script>
+			var testSeconds = '{{ timeVariable }}';
 			var counter = 0;  
 			var seconds = 20;
 			var percentage = 0;	
+
+			console.log(testSeconds);
 
 			function barUpdate() {
 				var style = document.getElementById("bar").style.width;
