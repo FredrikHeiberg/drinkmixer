@@ -38,6 +38,11 @@ def process():
 	timevar = mixDrink(drinkName, drinkSize)
 	return render_template('process.html', timevar=timevar)
 
+@app.route('/turnoff', method=['GET'])
+def turnoff():
+	turnOffMotors()
+	return redirect('/', code=302)
+
 # @app.route('/mix', methods=['GET'])
 # def mix():
 # 	# Get value from JS

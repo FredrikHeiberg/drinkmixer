@@ -33,7 +33,9 @@
 
 			function pageRefresh() {
 				setTimeout(function() {
-					window.location.replace("/");
+					//window.location.replace("/");
+					//{{ url_for('ajaxReply', title=title) }}
+					return redirect('/turnoff')
 				}, seconds*1000)
 			}
 
@@ -43,6 +45,7 @@
 				console.log("TEST");
 				console.log(test);
 			}
+
 			window.onload = runFunctions;
 			// window.onload = barUpdate;
 			// window.onload = pageRefresh;
