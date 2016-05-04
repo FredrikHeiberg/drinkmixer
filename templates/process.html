@@ -17,7 +17,7 @@
 			var counter = 0;  
 			var seconds = 20;
 			var percentage = 0;	
-			console.log({{ timevar }})
+
 			function barUpdate() {
 				var style = document.getElementById("bar").style.width;
 				setTimeout(function () {                              
@@ -33,9 +33,7 @@
 
 			function pageRefresh() {
 				setTimeout(function() {
-					//window.location.replace("/");
-					//{{ url_for('ajaxReply', title=title) }}
-					return redirect('/turnoff')
+					window.location.replace("/");
 				}, seconds*1000)
 			}
 
@@ -45,7 +43,6 @@
 				console.log("TEST");
 				console.log(test);
 			}
-
 			window.onload = runFunctions;
 			// window.onload = barUpdate;
 			// window.onload = pageRefresh;
