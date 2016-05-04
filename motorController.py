@@ -28,6 +28,7 @@ def mixTheDrink(name, size):
 
 	turnOffMotors()
 	print "MOTOR OFF!!"
+	return timeVariable
 
 def romAndCoke():
 	print "test"

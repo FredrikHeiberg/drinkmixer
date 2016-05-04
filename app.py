@@ -29,13 +29,14 @@ def index():
 			drinkName = param.get('name')
 			drinkSize = param.get('size')
 
-			mixDrink(drinkName, drinkSize)
+			#timevar = mixDrink(drinkName, drinkSize)
 
 	return render_template('index.html', error=error)
 
 @app.route('/process', methods=['GET', 'POST'])
 def process():
-	return render_template('process.html')
+	timevar = mixDrink(drinkName, drinkSize)
+	return render_template('process.html', timevar=timevar)
 
 # @app.route('/mix', methods=['GET'])
 # def mix():
