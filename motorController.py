@@ -18,7 +18,8 @@ atexit.register(turnOffMotors)
 myMotor = mh.getMotor(3)
 motor2 = mh.getMotor(2)
 
-def mixingWater(name, size, time):
+def mixingWater(name, size):
+	timeVariable = 2
 
 	motor2.setSpeed(255)
 	motor2.run(Adafruit_MotorHAT.RELEASE)
@@ -28,13 +29,14 @@ def mixingWater(name, size, time):
 
 	turnOffMotors()
 
-def mixTheDrink(name, size, time):
+def mixTheDrink(name, size):
+	timeVariable = 20
 
 	myMotor.setSpeed(255)
 	myMotor.run(Adafruit_MotorHAT.RELEASE)
 	myMotor.run(Adafruit_MotorHAT.FORWARD)
 
-	time.sleep(2.0)
+	time.sleep(20.0)
 
 	turnOffMotors()
 	print "MOTOR OFF!!"
