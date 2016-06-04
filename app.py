@@ -17,6 +17,8 @@ drinkName = ""
 drinkSize = ""
 mixTime = 0
 
+# PROBLEM: Oppdaterer ikke mixTime
+
 SESSION_TYPE = 'redis'
 Session(app)
 
@@ -31,12 +33,14 @@ def index():
 			drinkSize = param.get('size')
 
 			mixDrink(drinkName, drinkSize)
+			return render_template('process.html', error=error, mixTime=mixTime)
 
-	return render_template('index.html', error=error)
+	elif request.method == 'GET':
+		return render_template('index.html', error=error)
 
-@app.route('/process', methods=['GET', 'POST'])
-def process():
-	return render_template('process.html', mixTime=mixTime)
+#@app.route('/process', methods=['GET', 'POST'])
+#def process():
+#	return render_template('process.html', mixTime=mixTime)
 
 # @app.route('/mix', methods=['GET'])
 # def mix():
@@ -55,7 +59,6 @@ def process():
 
 # Run Python code to select desired drink and size
 def mixDrink(name, size):
-	global mixTime
 	if (name == 'romCoke'):
 		drinkName = 'rom';
 		mixTime = 2
