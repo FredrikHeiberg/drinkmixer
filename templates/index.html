@@ -8,6 +8,7 @@
 		<h1>Mixer Menu</h1>	
 
 		
+		<form action="/process" method="POST" class='create-drink' id='create-drink'>
 		<div id='inner'>
 			<div id='ginTonic'> 
 				<div id='shade'>
@@ -34,23 +35,26 @@
 					<h3 id='label'>Long Island Iced Tea</h3>
 				</div>
 			</div> -->
-			<div>
-				<br>
-				<h2>Select a size</h2>
-				<br>
-				<div class="btn-group" role="group" aria-label="...">
-					<button type="button" id="40" class="btn btn-danger">40ml</button>
-					<button type="button" id="200" class="btn btn-danger">200ml</button>
-					<button type="button" id="400" class="btn btn-danger">400ml</button>
+				<div>
+					<br>
+					<h2>Select a size</h2>
+					<br>
+					<div class="btn-group" role="group" aria-label="...">
+						<button type="button" id="40" class="btn btn-danger">40ml</button>
+						<button type="button" id="200" class="btn btn-danger">200ml</button>
+						<button type="button" id="400" class="btn btn-danger">400ml</button>
+					</div>
+
+					<br><br><br>
+					
+					<input type='submit' id="mix" class="btn btn btn-danger" value="MIX" disabled>
+
+					<br>
 				</div>
 
-				<br><br><br>
-				<form method='POST' class='create-drink' id='create-drink'>
-				<input type='submit' id="mix" class="btn btn btn-danger" value="MIX" disabled>
-
-				<br>
+				<input type="hidden" id="drink-name" name="name">
+				<input type="hidden" id="drink-size" name="size">
 			</form>
-			</div>
 
 
 			<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

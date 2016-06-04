@@ -13,48 +13,41 @@
 					<span class="sr-only">0% Complete (warning)</span>
 				</div>
 			</div>
-			<script>
-			var counter = 0;  
-			var seconds = 10;
-			var percentage = 0;	
-			var mixSeconds = '{{ mixTime }}';
-			console.log(mixSeconds)
-
-			function barUpdate() {
-				var style = document.getElementById("bar").style.width;
-				setTimeout(function () {                              
-					if (counter < seconds) { 
-						counter = counter + 0.11;   
-						percentage = counter/seconds*100;
-						document.getElementById("bar").style.width=percentage+"%";
-						console.log(percentage);
-						barUpdate();              
-					}
-				}, 100) 
-			}
-
-			function pageRefresh() {
-				setTimeout(function() {
-					window.location.replace("/");
-				}, seconds*1000)
-			}
-
-			function runFunctions() {
-				barUpdate();
-				pageRefresh();
-				//console.log("TEST");
-				//console.log(test);
-			}
-			window.onload = runFunctions;
-			// window.onload = barUpdate;
-			// window.onload = pageRefresh;
-			</script>
-			<div>
-			</div>
 			<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 			<!-- Include all compiled plugins (below), or include individual files as needed -->
 			<script src="/static/js/bootstrap.min.js"></script>
 			<script src="/static/js/logic.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function() {
+					var counter = 0;  
+					var percentage = 0;	
+					var seconds = '{{ mixTime }}';
+
+					function barUpdate() {
+						var style = document.getElementById("bar").style.width;
+						setTimeout(function () {                              
+							if (counter < seconds) { 
+								counter = counter + 0.11;   
+								percentage = counter/seconds*100;
+								document.getElementById("bar").style.width=percentage+"%";
+								console.log(percentage);
+								barUpdate();              
+							}
+						}, 100) 
+					}
+
+					function pageRefresh() {
+						setTimeout(function() {
+							window.location.replace("/");
+						}, seconds*1000)
+					}
+
+					barUpdate();
+					pageRefresh();
+					// window.onload = barUpdate;
+					// window.onload = pageRefresh;			
+				});
+			</script>
 		</body>
 		<!--- Make sure that js function runs on pageload! --> 

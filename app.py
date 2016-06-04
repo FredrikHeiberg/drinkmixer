@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, json, session, redirect
+from flask import Flask, render_template, request, json, session, redirect, url_for
 from flask.ext.session import Session
 app = Flask(__name__)
 
@@ -17,23 +17,16 @@ from motorController import mixTheDrink, mixingWater
 SESSION_TYPE = 'redis'
 Session(app)
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/', methods=['GET'])
 def index():
-	error = None
-	
-	if request.method == 'POST':
-		param = request.json
-		if param != None:
-			drinkName = param.get('name')
-			drinkSize = param.get('size')
+	return render_template('index.html')
 
-			mixTime = mixDrink(drinkName, drinkSize)
-			return render_template('process.html', mixTime=mixTime)
-	return render_template('index.html', error=error)
-
-#@app.route('/process', methods=['GET', 'POST'])
-#def process():
-#	return render_template('process.html', mixTime=mixTime)
+@app.route('/process', methods=['POST'])
+def process():
+	drinkName = request.form['name']
+	drinkSize = request.form['size']
+	mixTime = mixDrink(drinkName, drinkSize)
+	return render_template('process.html', mixTime=mixTime)
 
 # @app.route('/mix', methods=['GET'])
 # def mix():
@@ -52,13 +45,14 @@ def index():
 
 # Run Python code to select desired drink and size
 def mixDrink(name, size):
+	print name
 	mixTime = 0
 
 	if name == 'romCoke':
 		mixTime = 2
 	elif name == 'ginTonic':
 		mixTime = 10
-	elif name == 'fantaVodka':
+	elif name == 'vodkaFanta':
 		mixTime = 2
 
 	#mixTheDrink(name, size)
