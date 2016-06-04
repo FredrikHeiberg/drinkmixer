@@ -12,11 +12,6 @@ from motorController import mixTheDrink, mixingWater
 # create a default object, no changes to I2C address or frequency
 #mh = Adafruit_MotorHAT(addr=0x60)
 
-param = []
-drinkName = ""
-drinkSize = ""
-mixTime = 0
-
 # PROBLEM: Oppdaterer ikke mixTime
 
 SESSION_TYPE = 'redis'
@@ -32,8 +27,8 @@ def index():
 			drinkName = param.get('name')
 			drinkSize = param.get('size')
 
-			mixDrink(drinkName, drinkSize)
-			return render_template('process.html', error=error, mixTime=mixTime)
+			mixTime = mixDrink(drinkName, drinkSize)
+			return render_template('process.html', mixTime=mixTime)
 
 	elif request.method == 'GET':
 		return render_template('index.html', error=error)
@@ -59,24 +54,24 @@ def index():
 
 # Run Python code to select desired drink and size
 def mixDrink(name, size):
-	if (name == 'romCoke'):
-		drinkName = 'rom';
+	mixTime = 0
+
+	if name == 'romCoke':
 		mixTime = 2
-	elif (name == 'ginTonic'):
-		drinkName = 'gin';
+	elif name == 'ginTonic':
 		mixTime = 10
-	elif (name == 'fantaVodka'):
-		drinkName = 'vodka';
+	elif name == 'fantaVodka':
 		mixTime = 2
 
 	#mixTheDrink(name, size)
 	#mixingWater()
 
-
-	if (drinkName == 'rom'):
+	if name == 'romCoke':
 		mixingWater(name, size, mixTime)
-	elif (drinkName == 'gin'):
+	elif name == 'ginTonic':
 		mixTheDrink(name, size, mixTime)
+
+	return mixTime
 
 	#else:
 	#	mixTheDrink(name, size)
