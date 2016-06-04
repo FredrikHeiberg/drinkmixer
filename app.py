@@ -67,6 +67,8 @@ def mixDrink(name, size):
 
 	if (drinkName == 'rom'):
 		mixingWater()
+	if (drinkName == 'gin'):
+		mixTheDrink(name, size)
 
 	else:
 		mixTheDrink(name, size)
