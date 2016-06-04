@@ -65,7 +65,7 @@ def mixDrink(name, size):
 	#mixingWater()
 
 
-	if (name == 'romCoke'):
+	if (name != 'romCoke'):
 		mixingWater()
 
 	else:
