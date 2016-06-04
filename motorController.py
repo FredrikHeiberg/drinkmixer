@@ -19,9 +19,9 @@ myMotor = mh.getMotor(3)
 fastMotor = mh.getMotor(2)
 
 def mixingWater():
-	myMotor.setSpeed(255)
-	myMotor.run(Adafruit_MotorHAT.RELEASE)
-	myMotor.run(Adafruit_MotorHAT.FORWARD)
+	fastMotor.setSpeed(255)
+	fastMotor.run(Adafruit_MotorHAT.RELEASE)
+	fastMotor.run(Adafruit_MotorHAT.FORWARD)
 
 	time.sleep(3)
 
