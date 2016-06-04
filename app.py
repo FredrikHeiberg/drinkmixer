@@ -67,11 +67,11 @@ def mixDrink(name, size):
 
 	if (drinkName == 'rom'):
 		mixingWater(name, size)
-	if (drinkName == 'gin'):
+	elif (drinkName == 'gin'):
 		mixTheDrink(name, size)
 
-	else:
-		mixTheDrink(name, size)
+	#else:
+	#	mixTheDrink(name, size)
 	#print "run mixer: %s, %s" %(name, size)
 	#myMotor.setSpeed(255)
 	#myMotor.run(Adafruit_MotorHAT.FORWARD)
