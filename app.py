@@ -54,18 +54,18 @@ def process():
 
 # Run Python code to select desired drink and size
 def mixDrink(name, size):
-	#if (name == 'romCoke'):
-	#	drinkName = 
-	#elif (name == 'ginTonic'):
-	#	drinkName = 
-	#elif (name == 'fantaVodka'):
-	#	drinkName = 
+	if (name == 'romCoke'):
+		drinkName = 'rom';
+	elif (name == 'ginTonic'):
+		drinkName = 'gin';
+	elif (name == 'fantaVodka'):
+		drinkName = 'vodka';
 
 	#mixTheDrink(name, size)
 	#mixingWater()
 
 
-	if (name != 'romCoke'):
+	if (drinkName == 'rom'):
 		mixingWater()
 
 	else:
