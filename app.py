@@ -61,10 +61,9 @@ def mixDrink(name, size):
 	#elif (name == 'fantaVodka'):
 	#	drinkName = 
 
-	mixTheDrink(name, size)
-	mixingWater()
-	print "NAME!"
-	print name
+	#mixTheDrink(name, size)
+	#mixingWater()
+
 
 	if (name == 'romCoke'):
 		mixingWater()
