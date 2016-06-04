@@ -29,9 +29,7 @@ def index():
 
 			mixTime = mixDrink(drinkName, drinkSize)
 			return render_template('process.html', mixTime=mixTime)
-
-	elif request.method == 'GET':
-		return render_template('index.html', error=error)
+	return render_template('index.html', error=error)
 
 #@app.route('/process', methods=['GET', 'POST'])
 #def process():
