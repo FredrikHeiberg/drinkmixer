@@ -15,9 +15,10 @@
 			</div>
 			<script>
 			var counter = 0;  
-			//var seconds = 10;
+			var seconds = 10;
 			var percentage = 0;	
-			var seconds = '{{ mixTime }}';
+			var mixSeconds = '{{ mixTime }}';
+			console.log(mixSeconds)
 
 			function barUpdate() {
 				var style = document.getElementById("bar").style.width;
