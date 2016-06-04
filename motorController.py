@@ -16,14 +16,14 @@ def turnOffMotors():
 atexit.register(turnOffMotors)
 
 myMotor = mh.getMotor(3)
-fastMotor = mh.getMotor(2)
+motor2 = mh.getMotor(2)
 
-def mixingWater():
-	fastMotor.setSpeed(255)
-	fastMotor.run(Adafruit_MotorHAT.RELEASE)
-	fastMotor.run(Adafruit_MotorHAT.FORWARD)
+def mixingWater(name, size):
+	motor2.setSpeed(255)
+	motor2.run(Adafruit_MotorHAT.RELEASE)
+	motor2.run(Adafruit_MotorHAT.FORWARD)
 
-	time.sleep(2)
+	time.sleep(2.0)
 
 	turnOffMotors()
 

@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, json, session, redirect
 from flask.ext.session import Session
 app = Flask(__name__)
 
-from motorController import mixTheDrink
+from motorController import mixTheDrink, mixingWater
 
 #from Adafruit_MotorHAT import Adafruit_MotorHAT, Adafruit_DCMotor
  
@@ -66,7 +66,7 @@ def mixDrink(name, size):
 
 
 	if (drinkName == 'rom'):
-		mixingWater()
+		mixingWater(name, size)
 	if (drinkName == 'gin'):
 		mixTheDrink(name, size)
 
