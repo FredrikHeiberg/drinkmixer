@@ -69,6 +69,7 @@ $(document).ready(function() {
 
 		drinkSize = 0;
 		drinkName = "";
+		console.log(drinkName);
 	})
 });
 
