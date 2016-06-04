@@ -62,6 +62,7 @@ def mixDrink(name, size):
 	#	drinkName = 
 
 	mixTheDrink(name, size)
+	mixingWater()
 	#print "run mixer: %s, %s" %(name, size)
 	#myMotor.setSpeed(255)
 	#myMotor.run(Adafruit_MotorHAT.FORWARD)
