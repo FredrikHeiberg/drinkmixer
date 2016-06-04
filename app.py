@@ -55,6 +55,7 @@ def process():
 
 # Run Python code to select desired drink and size
 def mixDrink(name, size):
+	global mixTime
 	if (name == 'romCoke'):
 		drinkName = 'rom';
 		mixTime = 2

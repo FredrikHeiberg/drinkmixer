@@ -19,7 +19,7 @@ myMotor = mh.getMotor(3)
 motor2 = mh.getMotor(2)
 
 def mixingWater(name, size, time):
-	mixingTime = 10
+	mixingTime = 2
 
 	motor2.setSpeed(255)
 	motor2.run(Adafruit_MotorHAT.RELEASE)
