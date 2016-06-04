@@ -15,7 +15,7 @@ from motorController import mixTheDrink, mixingWater
 param = []
 drinkName = ""
 drinkSize = ""
-mixTime = 3
+mixTime = 0
 
 SESSION_TYPE = 'redis'
 Session(app)
@@ -57,19 +57,22 @@ def process():
 def mixDrink(name, size):
 	if (name == 'romCoke'):
 		drinkName = 'rom';
+		mixTime = 2
 	elif (name == 'ginTonic'):
 		drinkName = 'gin';
+		mixTime = 10
 	elif (name == 'fantaVodka'):
 		drinkName = 'vodka';
+		mixTime = 2
 
 	#mixTheDrink(name, size)
 	#mixingWater()
 
 
 	if (drinkName == 'rom'):
-		mixingWater(name, size)
+		mixingWater(name, size, mixTime)
 	elif (drinkName == 'gin'):
-		mixTheDrink(name, size)
+		mixTheDrink(name, size, mixTime)
 
 	#else:
 	#	mixTheDrink(name, size)
