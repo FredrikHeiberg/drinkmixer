@@ -23,9 +23,9 @@ def mixingWater():
 	fastMotor.run(Adafruit_MotorHAT.RELEASE)
 	fastMotor.run(Adafruit_MotorHAT.FORWARD)
 
-	time.sleep(3)
+	time.sleep(2)
 
-	#turnOffMotors()
+	turnOffMotors()
 
 def mixTheDrink(name, size):
 	timeVariable = 20
