@@ -15,6 +15,7 @@ from motorController import mixTheDrink, mixingWater
 param = []
 drinkName = ""
 drinkSize = ""
+testTime = 3
 
 SESSION_TYPE = 'redis'
 Session(app)
@@ -35,7 +36,7 @@ def index():
 
 @app.route('/process', methods=['GET', 'POST'])
 def process():
-	return render_template('process.html')
+	return render_template('process.html', testTime=testTime)
 
 # @app.route('/mix', methods=['GET'])
 # def mix():
