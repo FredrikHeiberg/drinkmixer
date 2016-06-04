@@ -15,7 +15,7 @@ from motorController import mixTheDrink, mixingWater
 param = []
 drinkName = ""
 drinkSize = ""
-mixTime = 0
+mixTime = 3
 
 SESSION_TYPE = 'redis'
 Session(app)
@@ -36,7 +36,7 @@ def index():
 
 @app.route('/process', methods=['GET', 'POST'])
 def process():
-	return render_template('process.html', testTime=testTime)
+	return render_template('process.html', mixTime=mixTime)
 
 # @app.route('/mix', methods=['GET'])
 # def mix():
@@ -57,22 +57,19 @@ def process():
 def mixDrink(name, size):
 	if (name == 'romCoke'):
 		drinkName = 'rom';
-		mixTime = 2;
 	elif (name == 'ginTonic'):
 		drinkName = 'gin';
-		mixTime = 10;
 	elif (name == 'fantaVodka'):
 		drinkName = 'vodka';
-		mixTime = 2;
 
 	#mixTheDrink(name, size)
 	#mixingWater()
 
 
 	if (drinkName == 'rom'):
-		mixingWater(name, size, mixTime)
+		mixingWater(name, size)
 	elif (drinkName == 'gin'):
-		mixTheDrink(name, size, mixTime)
+		mixTheDrink(name, size)
 
 	#else:
 	#	mixTheDrink(name, size)
