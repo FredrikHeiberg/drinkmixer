@@ -63,9 +63,10 @@ def mixDrink(name, size):
 
 	mixTheDrink(name, size)
 	mixingWater()
+	print "NAME!"
+	print name
 
 	if (name == 'romCoke'):
-		print name
 		mixingWater()
 
 	else:
