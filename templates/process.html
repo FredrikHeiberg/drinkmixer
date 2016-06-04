@@ -18,6 +18,7 @@
 			var seconds = 20;
 			var percentage = 0;	
 			var timeVariable = '{{ testTime }}';
+			console.log(timeVariable);
 
 			function barUpdate() {
 				var style = document.getElementById("bar").style.width;
@@ -41,8 +42,8 @@
 			function runFunctions() {
 				barUpdate();
 				pageRefresh();
-				console.log("TEST");
-				console.log(test);
+				//console.log("TEST");
+				//console.log(test);
 			}
 			window.onload = runFunctions;
 			// window.onload = barUpdate;
