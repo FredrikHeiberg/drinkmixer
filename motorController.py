@@ -22,24 +22,24 @@ def turnOffMotors():
 def mixingWater(name, size, mixTime):
 	mixingTime = 2
 
-	#motor2.setSpeed(255)
-	#motor2.run(Adafruit_MotorHAT.RELEASE)
-	#motor2.run(Adafruit_MotorHAT.FORWARD)
-	print "sleeping"
+	motor2.setSpeed(255)
+	motor2.run(Adafruit_MotorHAT.RELEASE)
+	motor2.run(Adafruit_MotorHAT.FORWARD)
+
 	time.sleep(mixTime)
 	print "MOTOR OFF!!"
-	#turnOffMotors()
+	turnOffMotors()
 
 def mixTheDrink(name, size, mixTime):
 	mixingTime = 10
 
-	#myMotor.setSpeed(255)
-	#myMotor.run(Adafruit_MotorHAT.RELEASE)
-	#myMotor.run(Adafruit_MotorHAT.FORWARD)
-	print "drinking"
+	myMotor.setSpeed(255)
+	myMotor.run(Adafruit_MotorHAT.RELEASE)
+	myMotor.run(Adafruit_MotorHAT.FORWARD)
+
 	time.sleep(mixTime)
 
-	#turnOffMotors()
+	turnOffMotors()
 	print "MOTOR OFF!!"
 
 def romAndCoke():
