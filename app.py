@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, json, session, redirect, url_for
+from flask import Flask, render_template, request, json, session, redirect
 from flask.ext.session import Session
 app = Flask(__name__)
 
@@ -11,8 +11,6 @@ from motorController import mixTheDrink, mixingWater
 
 # create a default object, no changes to I2C address or frequency
 #mh = Adafruit_MotorHAT(addr=0x60)
-
-# PROBLEM: Oppdaterer ikke mixTime
 
 SESSION_TYPE = 'redis'
 Session(app)
