@@ -57,10 +57,10 @@ def mixDrink(name, size):
 	#mixingWater()
 	t = threading.Thread()
 	if name == 'romCoke':
-		t = threading.Thread(target=mixingWater, args=(name, size, mixTime,))
+		t = threading.Thread(target=mixingWater, args=(name, size, mixTime))
 		#mixingWater(name, size, mixTime)
 	elif name == 'ginTonic':
-		t = threading.Thread(target=mixTheDrink, args=(name, size, mixTime,))
+		t = threading.Thread(target=mixTheDrink, args=(name, size, mixTime))
 		#mixTheDrink(name, size, mixTime)
 	t.start()
 	return mixTime
