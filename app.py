@@ -3,7 +3,7 @@ from flask.ext.session import Session
 app = Flask(__name__)
 
 from motorController import mixTheDrink, mixingWater
-
+import threading
 #from Adafruit_MotorHAT import Adafruit_MotorHAT, Adafruit_DCMotor
  
 #import time
@@ -26,6 +26,13 @@ def process():
 	mixTime = mixDrink(drinkName, drinkSize)
 	return render_template('process.html', mixTime=mixTime)
 
+@app.route('/ajax' methods=['POST'])
+def ajaxProcess():
+	drinkName = request.form['name']
+	drinkSize = request.form['size']
+	mixTime = mixDrink(drinkName, drinkSize)
+	return jsonify(mixTime=mixTime)
+
 # @app.route('/mix', methods=['GET'])
 # def mix():
 # 	# Get value from JS
@@ -45,7 +52,6 @@ def process():
 def mixDrink(name, size):
 	print name
 	mixTime = 0
-
 	if name == 'romCoke':
 		mixTime = 2
 	elif name == 'ginTonic':
@@ -57,10 +63,12 @@ def mixDrink(name, size):
 	#mixingWater()
 
 	if name == 'romCoke':
-		mixingWater(name, size, mixTime)
+		t = threading.Thread(target=mixingWater, args=(name, size, mixTime))
+		#mixingWater(name, size, mixTime)
 	elif name == 'ginTonic':
-		mixTheDrink(name, size, mixTime)
-
+		t = threading.Thread(target=mixTheDrink, args=(name, size, mixTime))
+		#mixTheDrink(name, size, mixTime)
+	t.start()
 	return mixTime
 
 	#else:
