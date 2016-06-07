@@ -26,12 +26,6 @@ def process():
 	mixTime = mixDrink(drinkName, drinkSize)
 	return render_template('process.html', mixTime=mixTime)
 
-@app.route('/ajax' methods=['POST'])
-def ajaxProcess():
-	drinkName = request.form['name']
-	drinkSize = request.form['size']
-	mixTime = mixDrink(drinkName, drinkSize)
-	return jsonify(mixTime=mixTime)
 
 # @app.route('/mix', methods=['GET'])
 # def mix():
