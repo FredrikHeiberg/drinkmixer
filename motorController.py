@@ -21,9 +21,9 @@ motor2 = mh.getMotor(2)
 
 def mixingWater(name, size, mixTime):
 
-	motor2.setSpeed(255)
-	motor2.run(Adafruit_MotorHAT.RELEASE)
-	motor2.run(Adafruit_MotorHAT.FORWARD)
+	myMotor.setSpeed(255)
+	myMotor.run(Adafruit_MotorHAT.RELEASE)
+	myMotor.run(Adafruit_MotorHAT.FORWARD)
 
 	time.sleep(mixTime)
 	print "MOTOR OFF!!"
