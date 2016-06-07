@@ -6,7 +6,7 @@ import time
 import atexit
 
 
-#mh = Adafruit_MotorHAT(addr=0x60)
+mh = Adafruit_MotorHAT(addr=0x60)
 
 def turnOffMotors():
 	mh.getMotor(1).run(Adafruit_MotorHAT.RELEASE)
@@ -14,10 +14,10 @@ def turnOffMotors():
 	mh.getMotor(3).run(Adafruit_MotorHAT.RELEASE)
 	mh.getMotor(4).run(Adafruit_MotorHAT.RELEASE)
 
-#atexit.register(turnOffMotors)
+atexit.register(turnOffMotors)
 
-#myMotor = mh.getMotor(3)
-#motor2 = mh.getMotor(2)
+myMotor = mh.getMotor(3)
+motor2 = mh.getMotor(2)
 
 def mixingWater(name, size, mixTime):
 	mixingTime = 2
