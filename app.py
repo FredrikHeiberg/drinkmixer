@@ -1,8 +1,9 @@
 from flask import Flask, render_template, request, json, session, redirect
-from flask.ext.session import Session
+#from flask.ext.session import Session
+from flask_session import Session
 app = Flask(__name__)
 
-from motorController import mixTheDrink, mixingWater
+#from motorController import mixTheDrink, mixingWater
 import threading
 #from Adafruit_MotorHAT import Adafruit_MotorHAT, Adafruit_DCMotor
  
